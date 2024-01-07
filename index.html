@@ -20,7 +20,7 @@
     }
 
     .navBar {
-      background-color: black;
+      background-color: #6f4e37;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -69,7 +69,7 @@
     }
 
     .navList ul a:hover {
-      border-bottom: 2px solid darkorange;
+      border-bottom: 2px solid #E08115;
     }
 
     .home {
@@ -97,7 +97,7 @@
     .home-text h2 {
       font-size: 50px;
       font-weight: 30;
-      color: darkorange;
+      color: #E08115;
       letter-spacing: 5px;
     }
 
@@ -112,7 +112,7 @@
 
     /* .home-text button {
    padding: 9px 20px;
-   background-color: darkorange;
+   background-color: #E08115;
    border-radius: 10px;
    color: black;
    border: none;
@@ -121,7 +121,7 @@
 
     .home-text button {
       align-self: center;
-      background-color: darkorange;
+      background-color: #E08115;
       border-radius: 15px 225px 255px 15px 15px 255px 225px 15px;
       border-style: solid;
       border-width: 2px;
@@ -182,9 +182,14 @@
       color: white;
       text-align: center;
       font-size: 50px;
-      border-bottom: 2px solid darkorange;
+      border-bottom: 2px solid #E08115;
       display: inline-block;
       padding: 20px;
+    }
+
+    .service-group div:hover {
+      background-color: #6f4e37;
+      cursor: pointer;
     }
 
     .service-group {
@@ -204,7 +209,7 @@
 
     .service-group i {
       font-size: 70px;
-      color: darkorange;
+      color: #E08115;
     }
 
     .pricing {
@@ -234,7 +239,7 @@
       font-size: 50px;
       text-align: center;
       padding-bottom: 20px;
-      border-bottom: 2px solid darkorange;
+      border-bottom: 2px solid #E08115;
       display: inline-block;
     }
 
@@ -307,7 +312,7 @@
       color: white;
       text-align: center;
       font-size: 50px;
-      border-bottom: 2px solid darkorange;
+      border-bottom: 2px solid #E08115;
       display: inline-block;
       padding: 20px;
     }
@@ -353,6 +358,7 @@
       background-color: black;
       color: white;
       padding: 50px 100px;
+      padding-bottom: 70px;
     }
 
     .contact-heading {
@@ -365,7 +371,7 @@
       color: white;
       text-align: center;
       font-size: 50px;
-      border-bottom: 2px solid darkorange;
+      border-bottom: 2px solid #E08115;
       display: inline-block;
       padding: 20px;
     }
@@ -384,7 +390,7 @@
     }
 
     .contact-us-content i {
-      color: darkorange;
+      color: #E08115;
       font-size: 20px;
       margin-right: 10px;
     }
@@ -393,11 +399,11 @@
       padding: 5px 20px;
     }
 
-    .special-sign button{
+    .special-sign button {
       display: block;
       margin-top: 10px;
       align-self: center;
-      background-color: darkorange;
+      background-color: #E08115;
       border-radius: 15px 225px 255px 15px 15px 255px 225px 15px;
       border-style: solid;
       border-width: 2px;
@@ -421,6 +427,15 @@
       box-shadow: rgba(0, 0, 0, .3) 2px 8px 8px -5px;
       transform: translate3d(0, 2px, 0);
     }
+
+    .footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #533012;
+      color: white;
+      padding: 10px 100px;
+    }
   </style>
 </head>
 
@@ -437,19 +452,19 @@
     </div>
     <div class="navList">
       <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Service</a></li>
-        <li><a href="#">Pricing</a></li>
-        <li><a href="#">Gallery</a></li>
-        <li><a href="#">Conatact</a></li>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#service">Service</a></li>
+        <li><a href="#pricing">Pricing</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#contact">Conatact</a></li>
       </ul>
     </div>
   </nav>
   <!-- Navbar End -->
 
   <!-- Home Start -->
-  <section class="container home">
+  <section class="container home" id="home">
     <div class="home-text">
       <h2>Outstanding</h2>
       <h1>Coffee Shop</h1>
@@ -462,16 +477,16 @@
   <!-- Home End -->
 
   <!-- About Start -->
-  <section class="container about">
+  <section class="container about" id="about">
     <div>
       <h1>Start Your <em>Morning</em></h1>
-      <h1>With <em>Coffee</em></h1>
+      <h1>With <em class="coffee">Coffee</em></h1>
     </div>
   </section>
   <!-- About End -->
 
   <!-- Service Start -->
-  <section class="container service">
+  <section class="container service" id="service">
     <div class="service-header">
       <h1>Best Service Ever</h1>
     </div>
@@ -504,7 +519,7 @@
   <!-- Service End -->
 
   <!-- Pricing Start -->
-  <section class="container pricing">
+  <section class="container pricing" id="pricing">
     <div class="pricing-image"></div>
     <div class="pricing-header">
       <h1>HOT/COLD Beverages</h1>
@@ -564,7 +579,7 @@
   <!-- Pricing End -->
 
   <!-- Gallery Start -->
-  <section class="container gallery">
+  <section class="container gallery" id="gallery">
     <div class="gallery-header">
       <h1>Our Gallery</h1>
     </div>
@@ -582,7 +597,7 @@
   <!-- Gallery End -->
 
   <!-- Content Start -->
-  <section class="container contact">
+  <section class="container contact" id="contact">
     <div class="contact-heading">
       <h1>Contact</h1>
     </div>
@@ -616,7 +631,14 @@
   <!-- Content End -->
 
   <!-- Footer Start -->
-  <footer></footer>
+  <footer class="footer container">
+    <div>
+      <h2>MONDAY Cafe</h2>
+    </div>
+    <div>
+      <p>© All Rights Reserved.</p>
+    </div>
+  </footer>
   <!-- Footer End -->
 </body>
 
