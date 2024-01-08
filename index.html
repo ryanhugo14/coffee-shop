@@ -9,10 +9,35 @@
     integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
   <style>
+    @font-face {
+      font-family: 'Gotham';
+      src: url('path/to/Gotham.woff') format('woff'),
+        url('path/to/Gotham.woff2') format('woff2'),
+        url('path/to/Gotham.ttf') format('truetype');
+    }
+
+    @font-face {
+      font-family: 'DIN';
+      src: url('path/to/DIN.woff') format('woff'),
+        url('path/to/DIN.woff2') format('woff2'),
+        url('path/to/DIN.ttf') format('truetype');
+    }
+
+    @font-face {
+      font-family: 'Helvetica';
+      src: url('path/to/Helvetica.woff') format('woff'),
+        url('path/to/Helvetica.woff2') format('woff2'),
+        url('path/to/Helvetica.ttf') format('truetype');
+    }
+
     body {
       padding: 0;
       margin: 0;
-      font-family: Georgia, 'Times New Roman', Times, serif;
+      font-family: 'DIN', sans-serif;
+    }
+
+    .service-heading, .pricing-heading, .gallery-heading, .contact-header {
+      font-family: 'Helvetica', sans-serif;
     }
 
     .container {
@@ -120,6 +145,7 @@
   } */
 
     .home-text button {
+      margin-top: 10px;
       align-self: center;
       background-color: #E08115;
       border-radius: 15px 225px 255px 15px 15px 255px 225px 15px;
@@ -168,7 +194,6 @@
     }
 
     .service {
-      height: 600px;
       padding: 50px 100px;
       background-color: black;
     }
@@ -199,6 +224,7 @@
     }
 
     .service-group div {
+      width: 400px;
       border: 2px solid white;
       border-radius: 10px;
       padding: 20px;
@@ -214,7 +240,6 @@
 
     .pricing {
       padding: 70px 100px;
-      height: 700px;
       position: relative;
     }
 
@@ -468,9 +493,10 @@
     <div class="home-text">
       <h2>Outstanding</h2>
       <h1>Coffee Shop</h1>
-      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Provident dolores quis quibusdam impedit qui neque
-        harum
-        explicabo, aliquam ratione sint?</p>
+      <p>Welcome to our coffee shop, where every cup is a masterpiece. Step into our inviting space and experience the rich aroma
+      of freshly brewed coffee. Our dedicated baristas are passionate about crafting the perfect cup for you, using only the
+      finest beans and expert techniques. Whether you're a coffee connoisseur or a casual coffee lover, we invite you to savor
+      the moment with us at MONDAY Cafe.</p>
       <button>Learn More</button>
     </div>
   </section>
@@ -488,31 +514,30 @@
   <!-- Service Start -->
   <section class="container service" id="service">
     <div class="service-header">
-      <h1>Best Service Ever</h1>
+      <h1 class="service-heading">Best Service Ever</h1>
     </div>
     <div class="service-group">
       <div>
         <i class="fa-solid fa-person-circle-check"></i>
         <h1>Customer Service</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim quam culpa doloribus illo facilis inventore
-          nulla velit ratione corporis? Quas, omnis. Sed excepturi temporibus fugit hic reiciendis magni accusantium
-          repudiandae.</p>
-      </div>
-      <div>
-        <i class="fa-solid fa-book-open-reader"></i>
-        <h1>Various Menu</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim quam culpa doloribus illo facilis inventore
-          nulla
-          velit ratione corporis? Quas, omnis. Sed excepturi temporibus fugit hic reiciendis magni accusantium
-          repudiandae.</p>
+        <p>Our friendly team is here to ensure that your visit is nothing short of delightful. Whether you have a question about
+        our menu, need a recommendation, or simply want to share your feedback, we're here to assist you with a smile. Your
+        satisfaction is our priority, and we're committed to providing you with an exceptional coffee experience.</p>
       </div>
       <div>
         <i class="fa-solid fa-mug-hot"></i>
         <h1>Fresh Coffee</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim quam culpa doloribus illo facilis inventore
-          nulla
-          velit ratione corporis? Quas, omnis. Sed excepturi temporibus fugit hic reiciendis magni accusantium
-          repudiandae.</p>
+        <p>Our commitment to quality means that every cup is made with the finest, freshly ground beans, expertly brewed to
+          perfection. Whether you prefer a bold and robust roast or a smooth and mellow blend, our fresh coffee is sure to
+          delight
+          your senses.</p>
+      </div>
+      <div>
+        <i class="fa-solid fa-book-open-reader"></i>
+        <h1>Various Menu</h1>
+        <p>From classic espresso to specialty lattes, our diverse menu offers something for every palate. Whether you're craving a
+        rich and robust brew or a refreshing iced beverage, we've got you covered. Explore our selection of handcrafted drinks
+        and discover your new favorite. We're dedicated to serving up quality and variety in every cup</p>
       </div>
     </div>
   </section>
@@ -522,7 +547,7 @@
   <section class="container pricing" id="pricing">
     <div class="pricing-image"></div>
     <div class="pricing-header">
-      <h1>HOT/COLD Beverages</h1>
+      <h1 class="pricing-heading">HOT/COLD Beverages</h1>
     </div>
     <div class="pricing-content">
       <div class="left">
@@ -581,7 +606,7 @@
   <!-- Gallery Start -->
   <section class="container gallery" id="gallery">
     <div class="gallery-header">
-      <h1>Our Gallery</h1>
+      <h1 class="gallery-heading">Our Gallery</h1>
     </div>
     <div class="grid-container">
       <div class="item1 grid-item">
@@ -599,7 +624,7 @@
   <!-- Content Start -->
   <section class="container contact" id="contact">
     <div class="contact-heading">
-      <h1>Contact</h1>
+      <h1 class="contact-header">Contact</h1>
     </div>
     <div class="contact-content">
       <div class="contact-us">
